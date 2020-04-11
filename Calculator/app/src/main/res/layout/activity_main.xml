@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/et1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/num1"
+        android:layout_weight="1"/>
+    <EditText
+        android:id="@+id/et2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/num2"
+        android:layout_weight="1"/>
+    <Button
+        android:id="@+id/BtnNum0"
+        android:text="0"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:visibility="gone"/>
+
+    <Button
+        android:id="@+id/BtnNum1"
+        android:text="0"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:visibility="gone"/>
+
+    <Button
+        android:id="@+id/BtnNum2"
+        android:text="0"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:visibility="gone"/>
+
+    <Button
+        android:id="@+id/BtnNum3"
+        android:text="0"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:visibility="gone"/>
+
+    <Button
+        android:id="@+id/BtnNum4"
+        android:text="0"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:visibility="gone"/>
+
+    <Button
+        android:id="@+id/BtnNum5"
+        android:text="0"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:visibility="gone"/>
+
+    <Button
+        android:id="@+id/BtnNum6"
+        android:text="0"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:visibility="gone"/>
+
+    <Button
+        android:id="@+id/BtnNum7"
+        android:text="0"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:visibility="gone"/>
+
+    <Button
+        android:id="@+id/BtnNum8"
+        android:text="0"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:visibility="gone"/>
+
+    <Button
+        android:id="@+id/BtnNum9"
+        android:text="0"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:visibility="gone"/>
+    <Button
+        android:id="@+id/add"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/add"
+        android:layout_weight="1"/>
+    <Button
+        android:id="@+id/sub"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/sub"
+        android:layout_weight="1"/>
+    <Button
+        android:id="@+id/mul"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/mul"
+        android:layout_weight="1"/>
+    <Button
+        android:id="@+id/div"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/div"
+        android:layout_weight="1"/>
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="계산결과 : "
+        android:textColor="#ff0000"
+        android:textSize="20sp"
+        android:layout_weight="10"/>
+
+</LinearLayout>
