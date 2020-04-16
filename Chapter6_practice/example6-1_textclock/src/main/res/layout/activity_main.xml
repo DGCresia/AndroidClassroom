@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context=".MainActivity">
+
+    <TextClock
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextClock
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimary"/>
+
+    <TextClock
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:format12Hour="hh:mm:ss"
+        android:format24Hour="a hh:mm:ss"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        android:textColor="#ff0000"/>
+
+    <TextClock
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:format12Hour="hh:mm:ss a"
+        android:format24Hour="a hh:mm:ss"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        android:textColor="#00ff00"/>
+
+    <TextClock
+        android:id="@+id/tc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:format12Hour="a hh:mm:ss"
+        android:format24Hour="a hh:mm:ss"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        android:textColor="#0000ff"/>
+    
+    <Button
+        android:id="@+id/btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Get Time"/>
+
+    <TextView
+        android:id="@+id/tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="click time"
+        android:textSize="40sp"
+        />
+
+<!--    <TextClock
+        android:id="@+id/tc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:format12Hour="a hh:mm:ss"
+        android:textStyle="bold"
+        android:textSize="40sp"/>-->
+
+</LinearLayout>
