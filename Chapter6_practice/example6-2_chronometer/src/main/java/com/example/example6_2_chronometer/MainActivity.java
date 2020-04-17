@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.os.SystemClock;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Chronometer;
@@ -23,11 +24,14 @@ public class MainActivity extends AppCompatActivity {
         btn3 = findViewById(R.id.btn3);
         cm = findViewById(R.id.cm);
 
+        Log.d("elapsedRealtime()", String.valueOf(SystemClock.elapsedRealtime()));
+
         View.OnClickListener listener = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 switch (v.getId()) {
                     case R.id.btn1:
+                        cm.setBase(SystemClock.elapsedRealtime());
                         cm.start();
                         break;
                     case R.id.btn2:
@@ -41,6 +45,13 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         };
+
+        cm.setOnChronometerTickListener(new Chronometer.OnChronometerTickListener() {
+            @Override
+            public void onChronometerTick(Chronometer chronometer) {
+                Log.d("elapsedRealtime()", String.valueOf(SystemClock.elapsedRealtime()));
+            }
+        });
 
         btn1.setOnClickListener(listener);
         btn2.setOnClickListener(listener);
