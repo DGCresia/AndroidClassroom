@@ -147,9 +147,14 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void resetTimer() {
-
+        if (editText.getText().toString().equals("")) {
+            Toast.makeText(MainActivity.this, "입력값이 없습니다.", Toast.LENGTH_SHORT).show();
+            editText.setText(String.valueOf(fullTime));
+            return;
+        }
         fullTime = Long.parseLong(editText.getText().toString());
         halfTime = Math.round(fullTime/2);
+
         changeTextSize(fullTime);
 
         timer.setBackgroundColor(Color.YELLOW);
