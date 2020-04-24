@@ -12,10 +12,14 @@
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/boardgametimer" />
+            <option value="$PROJECT_DIR$/example6-12_progressbar" />
+            <option value="$PROJECT_DIR$/example6-13_scrollview" />
+            <option value="$PROJECT_DIR$/example6-13_scrollview2" />
             <option value="$PROJECT_DIR$/example6-1_textclock" />
             <option value="$PROJECT_DIR$/example6-2_chronometer" />
             <option value="$PROJECT_DIR$/example6-3_countdowntimer" />
             <option value="$PROJECT_DIR$/example6-4_timepickerdatepicker" />
+            <option value="$PROJECT_DIR$/project6_1" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
