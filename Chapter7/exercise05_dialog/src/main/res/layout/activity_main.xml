@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/btnd1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="기본 대화상자"/>
+
+    <Button
+        android:id="@+id/btnd2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="대화상자(중립, 취소, 확인 버튼)"/>
+
+    <Button
+        android:id="@+id/btnd3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="대화상자(중립, 취소, 확인 버튼)"/>
+
+    <Button
+        android:id="@+id/btnd4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="대화상자(중립, 취소, 확인 버튼)"/>
+
+    <Button
+        android:id="@+id/btnd5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="대화상자(중립, 취소, 확인 버튼)"/>
+
+</LinearLayout>
