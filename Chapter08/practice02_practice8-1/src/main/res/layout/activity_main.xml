@@ -20,6 +20,7 @@
 
     <EditText
         android:id="@+id/editText"
+        android:background="#ddffdd"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:inputType="textPersonName"

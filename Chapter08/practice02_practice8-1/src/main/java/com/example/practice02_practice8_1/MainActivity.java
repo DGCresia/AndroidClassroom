@@ -38,15 +38,15 @@ public class MainActivity extends AppCompatActivity {
         int month = calendar.get(Calendar.MONTH);
         int day = calendar.get(Calendar.DAY_OF_MONTH);
 
+        readAndWriteDrary(year, month, day);
+
         datePicker.init(year, month, day, new DatePicker.OnDateChangedListener() {
             @Override
             public void onDateChanged(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
-                fileName = String.format("%d_%d_%d.txt", year, monthOfYear, dayOfMonth);
-                String str = readDiary(fileName);
-                editText.setText(str);
-                btnWriter.setEnabled(true);
+                readAndWriteDrary(year, monthOfYear, dayOfMonth);
             }
         });
+
         btnWriter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -62,11 +62,10 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-    private String readDiary(String fileName) {
+
+    private String readDiary1(String fileName) {
         String diaryStr = null;
-        FileInputStream inputStream;
-        try {
-            inputStream = openFileInput(fileName);
+        try (FileInputStream inputStream = openFileInput(fileName)){
             byte[] txt = new byte[500];
             inputStream.read(txt);
             inputStream.close();
@@ -77,5 +76,27 @@ public class MainActivity extends AppCompatActivity {
             btnWriter.setText("새로 저장");
         }
         return diaryStr;
+    }
+
+    private String readDiary2(String fileName) {
+        String diaryStr = null;
+        try (FileInputStream inputStream = openFileInput(fileName)){
+            byte[] txt = new byte[inputStream.available()];
+            inputStream.read(txt);
+            inputStream.close();
+            diaryStr = (new String(txt)).trim();
+            btnWriter.setText("수정하기");
+        }catch (IOException e) {
+            editText.setHint("일기 없음");
+            btnWriter.setText("새로 저장");
+        }
+        return diaryStr;
+    }
+
+    private void readAndWriteDrary(int year, int month, int day) {
+        fileName = String.format("%d_%d_%d.txt", year, month, day);
+        String str = readDiary2(fileName);
+        editText.setText(str);
+        btnWriter.setEnabled(true);
     }
 }
