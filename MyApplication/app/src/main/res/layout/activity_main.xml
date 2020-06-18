@@ -1,14 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#ffcccc"
+    android:orientation="vertical">
 
-    <TextView
-        android:layout_gravity="center"
-        android:layout_width="wrap_content"
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnSecond"
+            android:text="Second 액티비티"/>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnThird"
+            android:text="Third 액티비티"/>
+
+    </RadioGroup>
+
+    <Button
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        android:textSize="40sp"
-        android:textColor="#ff0000" />
+        android:id="@+id/btnNew"
+        android:text="새 화면 열기"/>
 
-</GridLayout>
+</LinearLayout>
